@@ -217,7 +217,6 @@ header ul.is-sticky li a.active {
 /* end: hero section styles */
 
 /* start: how it works styles */
-#connect-with-me,
 #about {
   padding: 3rem 0;
   background: #f8f9fa;
@@ -349,43 +348,47 @@ header ul.is-sticky li a.active {
     margin-bottom: 4rem;
   }
 
-  #form-container {
-    width: 58%;
-    background: #fff;
-    padding: 3rem;
-    box-sizing: border-box;
-    height: 0%;
+  .flex {
+    justify-content: center;
 
-    h3 {
-      color: #000;
-      font-family: "Playfair Display", serif;
-      margin-bottom: 2rem;
-    }
-
-    label {
-      display: block;
-      color: #000;
-      margin-top: 1rem;
-    }
-
-    input,
-    textarea {
-      display: block;
-      border-radius: 20px;
-      padding: 10px;
-      border: 1px solid #ced4da;
-      width: 100%;
+    #form-container {
+      width: 58%;
+      background: #fff;
+      padding: 3rem;
       box-sizing: border-box;
-      height: 43px;
-      font-family: "Roboto", "Helvetica", "Sans-serif";
-      font-size: 1rem;
-      color: #495057;
-    }
+      height: 0%;
 
-    textarea {
-      height: 170px;
-      margin-bottom: 2rem;
-      resize: none;
+      h3 {
+        color: #000;
+        font-family: "Playfair Display", serif;
+        margin-bottom: 2rem;
+      }
+
+      label {
+        display: block;
+        color: #000;
+        margin-top: 1rem;
+      }
+
+      input,
+      textarea {
+        display: block;
+        border-radius: 20px;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        width: 100%;
+        box-sizing: border-box;
+        height: 43px;
+        font-family: "Roboto", "Helvetica", "Sans-serif";
+        font-size: 1rem;
+        color: #495057;
+      }
+
+      textarea {
+        height: 170px;
+        margin-bottom: 2rem;
+        resize: none;
+      }
     }
   }
 }
@@ -542,15 +545,6 @@ footer {
 
   #agents p.large-paragraph {
     width: 100%;
-  }
-
-  #connect-with-me .flex {
-    display: block;
-  }
-
-  #connect-with-me .flex > div {
-    width: 100%;
-    margin-top: 2rem;
   }
 
   #projects button.rounded {
