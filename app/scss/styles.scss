@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap");
+$base-color: #f69314;
+$text-color: #777;
 
 /* start: global styles */
 body {
@@ -7,7 +9,7 @@ body {
   padding: 0;
   font-size: 1rem;
   font-weight: 400;
-  color: #777;
+  color: $text-color;
   line-height: 1.7;
 }
 
@@ -53,7 +55,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  color: #f69314;
+  color: $base-color;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -78,7 +80,7 @@ p {
 }
 
 button.rounded {
-  background: #f69314;
+  background: $base-color;
   border: none;
   color: #fff;
   font-size: 16px;
@@ -105,7 +107,7 @@ button.rounded {
 
     span.fas,
     span.fab {
-      color: #f69314;
+      color: $base-color;
       font-size: 20px;
       padding: 10px;
     }
@@ -170,7 +172,7 @@ header ul li a.active {
 
 header ul.is-sticky li a:hover,
 header ul.is-sticky li a.active {
-  color: #f69314;
+  color: $base-color;
 }
 /* end: header styles */
 
@@ -276,8 +278,6 @@ header ul.is-sticky li a.active {
   }
 
   .container {
-    position: relative;
-
     #projects-slider {
       a.slick-arrow {
         color: #000;
@@ -331,6 +331,68 @@ header ul.is-sticky li a.active {
   }
 }
 /* end: projects styles */
+
+/* start: blog rss feed styles */
+#blog {
+  background: #f8f9fa;
+  padding: 3rem 0;
+  text-align: center;
+
+  .container {
+    a {
+      color: $base-color;
+    }
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active,
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .title {
+      font-size: 1.4rem;
+      color: $base-color;
+      font-weight: 800;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .posts {
+      margin: 0 4rem;
+      margin-top: 1rem;
+
+      .date {
+        font-style: italic;
+        color: $text-color;
+      }
+
+      img {
+        margin-left: auto;
+        padding-right: 0.5rem;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .project-details {
+        padding-bottom: 1rem;
+        .description {
+          color: $text-color;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+}
+/* end: blog rss feed styles */
 
 /* start: contact us styles */
 #contact {
@@ -402,7 +464,7 @@ footer {
 
     span.fas,
     span.fab {
-      color: #f69314;
+      color: $base-color;
       font-size: 25px;
       padding: 15px;
     }
@@ -445,7 +507,7 @@ footer {
     right: 2rem;
     top: 1.5rem;
     font-size: 30px;
-    color: #777;
+    color: $text-color;
     cursor: pointer;
     display: block;
     line-height: 1;
@@ -467,7 +529,7 @@ footer {
 
   nav ul li a.active,
   nav ul li a:hover {
-    color: #f69314;
+    color: $base-color;
   }
 }
 

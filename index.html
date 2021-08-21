@@ -317,6 +317,11 @@
     </section>
     <!-- Projects end -->
 
+    <section id="blog">
+      <div class="container blog-feed">
+      </div>
+    </section>
+
     <section id="contact">
       <div class="container">
         <h2>Contact Me</h2>
@@ -360,7 +365,6 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="dist/script.js" type="javascript"></script>
     <script>
       document.querySelector('form').onsubmit = e => {
         e.target.submit();
@@ -368,8 +372,51 @@
         return false;
       };
 
+      const FEED_URL = `https://marklucernas.dev/blog.xml`;
+      var feed = ""
+
+      $.get(FEED_URL, function (data) {
+        feed += '<h2>Recent Blog Posts</h2>'
+              + '<h5><a href="https://marklucernas.dev/">marklucernas.dev</a></h5>'
+              + '<div class="posts">';
+        $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+            var el = $(this);
+            
+            var content = el.find("content").text();
+            var contentRaw = content.replace(/<\/?[^>]+(>|$)#?/g, " ");
+            var ts = new Date(el.find("updated").text());
+            var temp = document.createElement("div");
+            temp.innerHTML = content;
+
+            feed += '<a href="' + el.find("id").text() + '">'
+                    +'<p class="title">'
+                    + el.find("title").text()
+                    + '</p>'
+                    + '<small class="date">'
+                      + ts.toDateString()
+                    + '</small>'
+                    + '<div class="flex project-details">'
+
+            if (temp.getElementsByTagName("img").length > 0) {
+              console.log(temp.getElementsByTagName("img")[0].outerHTML);
+              feed += temp.getElementsByTagName("img")[0].outerHTML
+            }
+
+            feed += '<div class="description">'
+                    + contentRaw
+                  + '</div>'
+                + '</div>'
+                + '</a>';
+        });
+        feed += '</div>';
+        document.getElementById("blog").
+          getElementsByClassName("blog-feed")[0].
+          innerHTML = feed;
+      });
+
       new GitHubCalendar(".calendar", "marklcrns", { responsive: true });
     </script>
+    <script type="text/javascript" src="dist/script.js" type="javascript"></script>
   </body>
 </html>
 
