@@ -79,6 +79,11 @@ p {
   margin: 0 0 1rem;
 }
 
+.link {
+  color: $base-color;
+  text-decoration: none;
+}
+
 button.rounded {
   background: $base-color;
   border: none;
