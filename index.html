@@ -27,6 +27,8 @@
     <script type="text/javascript" src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/2c0cbf9739.js" crossorigin="anonymous"></script>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lef-U0hAAAAABF2TRjRoMoK0FcPfhjVyDAakTLe"></script>
 
   </head>
   <body>
@@ -399,6 +401,7 @@
           <div id="form-container">
             <h3>Contact Form</h3>
             <form action="https://getform.io/f/32b051ae-f4bc-431f-b941-6fa3e27fcd8b" method="POST">
+              <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
               <label for="name">Name*</label>
               <input type="text" name="name" required>
 
@@ -437,6 +440,7 @@
 
     <script type="text/javascript" src="dist/script.js" type="javascript"></script>
     <script type="text/javascript" src="dist/blog.js" type="javascript"></script>
+    <script type="text/javascript" src="dist/grecaptcha.js" type="javascript"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> -->
     <!-- <script type="text/javascript" src="dist/darkmode.js" type="javascript"></script>             -->
   </body>
