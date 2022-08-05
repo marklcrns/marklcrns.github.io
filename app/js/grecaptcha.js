@@ -1,6 +1,6 @@
-grecaptcha.ready(function() {
-    grecaptcha.execute('6Lef-U0hAAAAABF2TRjRoMoK0FcPfhjVyDAakTLe', {action: 'homepage'})
-    .then(function(token) {
-      document.getElementById('captchaResponse').value = token;
-    });
-  });
+function enableSubmit() {
+  var submit = document.getElementById("submit");
+  submit.disabled = false;
+  submit.classList.remove("disabled");
+  submit.classList.add("rounded");
+}

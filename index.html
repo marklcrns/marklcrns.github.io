@@ -27,8 +27,8 @@
     <script type="text/javascript" src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/2c0cbf9739.js" crossorigin="anonymous"></script>
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lef-U0hAAAAABF2TRjRoMoK0FcPfhjVyDAakTLe"></script>
+    <!-- Google reCAPTCHA v2 https://docs.getform.io/features/spam-filtering/recaptcha-v2/ -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
   </head>
   <body>
@@ -401,7 +401,6 @@
           <div id="form-container">
             <h3>Contact Form</h3>
             <form action="https://getform.io/f/32b051ae-f4bc-431f-b941-6fa3e27fcd8b" method="POST">
-              <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
               <label for="name">Name*</label>
               <input type="text" name="name" required>
 
@@ -414,9 +413,11 @@
               <label for="message">Message*</label>
               <textarea name="message" placeholder="Message here..." required></textarea>
 
+              <div class="g-recaptcha" data-sitekey="6LfqLU4hAAAAACNJchilzIXxauELLGjTANI-NmSg" data-callback="enableSubmit"></div>
+
               <small>Your information will not be stored or shared.</small>
               <div class="email-submit flex">
-                <button class="rounded" type="submit">Send</button>
+                <button class="disabled" type="submit" id="submit" disabled="disabled">Send</button>
               </div>
             </form>
 

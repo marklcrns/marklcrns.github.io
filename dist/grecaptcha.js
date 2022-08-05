@@ -1,2 +1,2 @@
-grecaptcha.ready((function(){grecaptcha.execute("6Lef-U0hAAAAABF2TRjRoMoK0FcPfhjVyDAakTLe",{action:"homepage"}).then((function(e){document.getElementById("captchaResponse").value=e}))}));
+function enableSubmit(){var e=document.getElementById("submit");e.disabled=!1,e.classList.remove("disabled"),e.classList.add("rounded")}
 //# sourceMappingURL=grecaptcha.js.map

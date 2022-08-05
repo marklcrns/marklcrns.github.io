@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap");
 $base-color: #f69314;
+$disabled-color: #ddd;
 $text-color: #777;
 
 /* start: global styles */
@@ -93,6 +94,22 @@ button.rounded {
   padding: 10px 30px;
   line-height: 1.5;
   cursor: pointer;
+}
+
+button.disabled {
+  background: $disabled-color;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
 }
 /* end: global styles */
 
