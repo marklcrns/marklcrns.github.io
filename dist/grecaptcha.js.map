@@ -1,1 +1,0 @@
-{"version":3,"sources":["grecaptcha.js"],"names":["enableSubmit","submit","document","getElementById","disabled","classList","remove","add"],"mappings":"AAAA,SAASA,eACP,IAAIC,EAASC,SAASC,eAAe,UACrCF,EAAOG,UAAW,EAClBH,EAAOI,UAAUC,OAAO,YACxBL,EAAOI,UAAUE,IAAI","file":"grecaptcha.js"}
