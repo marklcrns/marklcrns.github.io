@@ -1,21 +1,33 @@
 # Personal Portfolio Website
 
-## Requirements
+## 3D Webpages
+
+<https://marklucernas.com>
+
+See [private repo](https://github.com/marklcrns/3d-portfolio) for the 3D
+version of the website.
+
+Make sure to copy the `dist` folder from the private repo **to the root** of
+this repo.
+
+## Plain Webpages
+
+<https://marklucernas.com/plain>
+
+### Requirements
 
 - `node.js`
 - `npm`
 - `gulp-cli`
 
-## Building from source
+### Dev
 
 ```sh
 # install dependencies
 npm install
-# build using gulp
-gulp
 ```
 
-## Run live server with `browsersync`
+### Run live server with `browsersync`
 
 ```sh
 # build and run live server
