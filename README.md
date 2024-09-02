@@ -1,16 +1,16 @@
 # Personal Portfolio Website
 
-## 3D Webpages
+## 3D Web Pages
 
 <https://marklucernas.com>
 
 See [private repo](https://github.com/marklcrns/3d-portfolio) for the 3D
-version of the website.
+version of the website made using Vite + React. Uses `HashRouter` for routing.
 
 Make sure to copy the `dist` folder from the private repo **to the root** of
 this repo.
 
-## Plain Webpages
+## Plain Web Pages
 
 <https://marklucernas.com/plain>
 
