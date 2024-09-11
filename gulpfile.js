@@ -37,7 +37,7 @@ function browsersyncReload(cb){
 
 // Watch Task
 function watchTask(){
-  gulp.watch('*.html', browsersyncReload);
+  gulp.watch('plain/*.html', browsersyncReload);
   gulp.watch(['plain/app/scss/**/*.scss', 'plain/app/js/**/*.js'], gulp.series(scssTask, jsTask, browsersyncReload));
 
   // No browser auto reload
